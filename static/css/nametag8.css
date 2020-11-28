@@ -1,0 +1,51 @@
+.container8 > div > div {
+    width: 86mm;
+    height: 59mm;
+    float: left;
+}
+
+.top > div {
+    margin-top: 14mm;
+}
+
+.row > div {
+    margin-top: 4.5mm;
+}
+
+.bottom > div {
+    margin-top: 4.5mm;
+    margin-bottom: 14mm;
+}
+
+.left {
+    margin-left: 17mm;
+    margin-right: 4.5mm;
+}
+
+.right {
+    margin-left: 4.5mm;
+    margin-right: 17mm;
+}
+
+
+.firstname {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.position {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    font-size: 12pt;
+    line-height: 80%;
+}
+
+.container8 {
+    width: 215mm;
+}

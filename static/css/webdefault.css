@@ -1,0 +1,127 @@
+/*Name:Cody Register
+Assignment: CS336 Assignment #5
+Created:20201108
+Description: Style SheetPage for the conference site.
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #1B2E44;
+  background-color: #EEEEEE;
+  font-family: "Times", serif;
+  align-content: center;
+}
+
+nav {
+  clear: both;
+  background-color: #1B2E44;
+  color: #EEEEEE;
+}
+
+nav ul {
+  margin: 0;
+  padding: 5px 0 5px 30px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 40px;
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+
+li {
+  list-style-type: none;
+}
+
+div {
+  width: 100%;
+  margin: auto;
+  color: #1B2E44;
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.row {
+  /* display: table; */
+  clear: both;
+  padding-bottom: 5px;
+}
+
+.radio {
+  width: 70%;
+  float: right;
+}
+
+.d50 {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.borders th, td {
+  border: 1px solid #1B2E44;
+  border-collapse: collapse;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+form > div > label, legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+  text-align: right;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+select,
+textarea {
+  width: 50%;
+}
+
+td > figure {
+  max-width: 350px;
+}
+
+body::after {
+  display: block;
+  height: 40px;
+}
+
+footer {
+  bottom: 40px;
+  clear: both;
+
+}
+
+fieldset:hover {
+  background-color: #2e86ab;
+  border: #a33b20 5px solid;
+}
+
+/*Changes widths to allow for stacking on mobiles*/
+@media only screen and (max-width: 1200px) {
+  div, .d50 {
+    width: 100%;
+  }
+
+  nav li {
+    display: table-row;
+    text-align: center;
+    width: 100%;
+  }
+}

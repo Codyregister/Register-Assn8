@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Awards{% endblock %}
+
+{% block body %}
+<div class="center">
+    <table class="borders">
+        <tr>
+            <th>Entry</th>
+            <th>Title</th>
+            <th>Artist</th>
+        </tr>
+        <tr>
+            <td>
+                <figure>
+                    <img src="static/images/book1.jpg" alt="Book 1">
+                </figure>
+            </td>
+            <td>
+                <p>"Rebecca"</p>
+            </td>
+            <td>
+                <p>
+                    Amy Kitcherside (UK)
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <figure>
+                    <img src="static/images/book2.jpg" alt="Book 2">
+                </figure>
+            </td>
+            <td>
+                <p>"Blank Book"</p>
+            </td>
+            <td>
+                <p>
+                    Sean Richards (USA)
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <figure>
+                    <img src="static/images/book3.jpg" alt="Book 3">
+                </figure>
+            </td>
+            <td>
+                <p>"Untitled"</p>
+            </td>
+            <td>
+                <p>
+                    Andrew Sims (UK)
+                </p>
+            </td>
+        </tr>
+    </table>
+    <div class="center">
+
+        <h2><a href="/poll">Vote Now!</a></h2></div>
+</div>
+{% endblock %}

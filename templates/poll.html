@@ -1,0 +1,41 @@
+<!--Name:Cody Register
+    Assignment: CS336 Assignment #4
+    Created:20201030
+    Description: Poll Page for the conference site.     -->
+{% extends "base.html" %}
+{% block title %}Poll{% endblock %}
+{% block body %}
+<p>
+<address>Text</address></p>
+<form>
+
+    <fieldset class="poll">
+        <input type="radio" id="opt1" name="Poll" value="Amy Kitcherside">
+        <label for="opt1">Amy Kitcherside</label>
+        <div id="poll1">
+            <p></p>
+
+
+        </div>
+
+        <input type="radio" id="opt2" name="Poll" value="Sean Richards">
+        <label for="opt2">Sean Richards</label>
+        <div id="poll2">
+            <p></p>
+
+        </div>
+
+        <input type="radio" id="opt3" name="Poll" value="Andrew Sims">
+        <label for="opt3">Andrew Sims</label>
+        <div id="poll3">
+            <p></p>
+
+        </div>
+
+
+        <input type="button" value="submit" onclick="pollCount(id)">
+
+    </fieldset>
+</form>
+
+{% endblock %}

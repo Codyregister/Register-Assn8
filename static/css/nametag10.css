@@ -1,0 +1,54 @@
+.container10 > div > div {
+    width: 76mm;
+    height: 50mm;
+    float: left;
+}
+
+.container10 > div {
+    width: 100%;
+    text-align: center;
+}
+
+.top > div {
+    margin-top: 15mm;
+}
+
+.bottom > div {
+    margin-bottom: 15mm;
+}
+
+.left {
+    margin-left: 30mm;
+}
+
+.right {
+    margin-right: 30mm;
+}
+
+
+span.firstname {
+    font-size: 22pt;
+    font-weight: bold;
+    color: green;
+}
+
+span.lastname {
+    font-size: 22pt;
+    font-weight: bold;
+    color: green;
+}
+
+.position {
+    font-weight: bold;
+    color: red;
+}
+
+p {
+    text-align: center;
+    font-size: 12pt;
+    line-height: 80%;
+}
+
+.container10 {
+    width: 250mm;
+}
