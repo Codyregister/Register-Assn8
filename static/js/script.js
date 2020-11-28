@@ -6,7 +6,7 @@
 var cookieString = "";
 var fields = ["title", "fname", "lname", "addr1", "addr2", "city", "state", "zip", "phone", "email", "website", "position", "company", "sess1", "sess2", "sess3"];
 if (document.getElementById("confId") != null) {
-    document.getElementById("confId").addEventListener("keyup", checkID);
+    document.getElementById("confId").addEventListener("blur", checkID);
 }
 
 function storeValues() {
@@ -23,7 +23,7 @@ function getCookie(key) {
     var cookieArray = document.cookie.substring(7, cookieLength - 1).split("_");
 
     for (var i = 0; i < cookieArray.length; i++) {
-        var tempCookie = cookieArray[i].split(":");
+        var tempCookie = cookieArray[i].split("|");
         if (key == tempCookie[0]) {
             return tempCookie[1];
         }
@@ -57,7 +57,7 @@ function checkID() {
 
 function cookieAdd(formfield) {
     if (document.getElementById(formfield) != null) {
-        cookieString += formfield + ":" + document.getElementById(formfield).value + "_";
+        cookieString += formfield + "|" + document.getElementById(formfield).value + "_";
         cookieLength++;
     }
 }
@@ -95,23 +95,24 @@ function errMessage(msg) {
     let errWindow = window.open("", "", "height = 400,width=500,top=" + topPos + ",left=" + leftPos + "");
     errWindow.document.write("<body background-color #a33b20> <h2>" + msg + "</h2> </body>");
 }
+//
+//var poll1, poll2, poll3;
 
-var poll1, poll2, poll3;
-if (poll1 == null) {
-    poll1 = 0;
-}
-if (poll2 == null) {
-    poll2 = 0;
-}
-if (poll3 == null) {
-    poll3 = 0;
-}
+//if (poll1 == null) {
+//    poll1 = 0;
+//}
+//if (poll2 == null) {
+//    poll2 = 0;
+//}
+//if (poll3 == null) {
+//    poll3 = 0;
+//}
 
-document.getElementById('poll1').innerHTML = localStorage.getItem('poll1');
-document.getElementById('poll2').innerHTML = localStorage.getItem('poll2');
-document.getElementById('poll3').innerHTML = localStorage.getItem('poll3');
+//document.getElementById('poll1').innerHTML = localStorage.getItem('poll1');
+//document.getElementById('poll2').innerHTML = localStorage.getItem('poll2');
+//document.getElementById('poll3').innerHTML = localStorage.getItem('poll3');
 
-function pollCount() {
+function pollCountold() {
     var voteOpt = document.querySelector('input[name="Poll"]:checked').id;
     voteOpt = voteOpt.substring(3, 4);
     console.log("Voting for " + voteOpt);
@@ -129,6 +130,38 @@ function pollCount() {
     }
 
 }
+var poll1, poll2, poll3;
+
+total1 = localStorage.getItem('opt1');
+total2 = localStorage.getItem('opt2');
+total3 = localStorage.getItem('opt3');
+
+if (total1 == null) {
+	total1 = 0;
+	localStorage.setItem('opt1', total1);
+}
+if (total2 == null) {
+	total2 = 0;
+	localStorage.setItem('opt2', total2);
+}
+if (total3 == null) {
+	total3 = 0;
+	localStorage.setItem('opt3', total3);
+}
+document.getElementById('poll1').textContent = localStorage.getItem('opt1');
+document.getElementById('poll2').textContent = localStorage.getItem('opt2');
+document.getElementById('poll3').textContent = localStorage.getItem('opt3');
+
+function pollCount() {
+	var voteOpt = document.querySelector('input[name="Poll"]:checked').id;
+	let total = parseInt(localStorage.getItem(voteOpt));
+	total += 1;
+	localStorage.setItem(voteOpt, total);
+	document.getElementById(voteOpt).textContent = total;
+}
+
+
+
 
 
 function pollAlert() {
